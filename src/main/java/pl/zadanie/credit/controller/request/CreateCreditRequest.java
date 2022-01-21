@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.pl.PESEL;
 
-import javax.persistence.Column;
 import javax.validation.constraints.NotNull;
 
 @NoArgsConstructor
@@ -27,6 +26,6 @@ public class CreateCreditRequest {
     @NotNull(message = "Credit name can not be null")
     private String creditName;
 
-    @Column(name = "Value can not be null")
+    @NotNull(message = "Value can not be null")
     private Double value;
 }
