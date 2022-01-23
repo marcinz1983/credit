@@ -17,7 +17,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("api/credit")
 public class CreditController {
 
 private final CreditService creditService;
@@ -27,13 +27,13 @@ private final CreditService creditService;
         this.creditService = creditService;
     }
 
-    @PostMapping
+    @PostMapping("/add")
     ResponseEntity<CreditCreateResponse> createCredit(@Valid @RequestBody CreateCreditRequest request){
         CreditCreateResponse response = creditService.createCredit(request);
         return new ResponseEntity<>(response,HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("/getAll")
     ResponseEntity<List<GetCreditsResponse>> getCredits(){
         List<GetCreditsResponse> allCredits = creditService.getAllCredits();
         return  new ResponseEntity<>(allCredits,HttpStatus.OK);
