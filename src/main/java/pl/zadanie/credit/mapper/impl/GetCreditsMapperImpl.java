@@ -59,14 +59,4 @@ public class GetCreditsMapperImpl implements GetCreditsMapper {
         return creditsList;
     }
 
-
 }
-
-//        credit1.keySet().forEach(key -> credit1.merge(key,
-//                credit2.get(key),
-//                (credit1, credit2) -> {
-//                    credit1.setCreditName(credit2.getCreditName());
-//                    credit1.setValue(credit2.getValue());
-//                    credit1.setCreditId(credit2.getCreditId());
-//                    return credit1;
-//                }));
