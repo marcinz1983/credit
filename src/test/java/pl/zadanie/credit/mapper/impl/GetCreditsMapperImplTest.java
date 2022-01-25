@@ -21,7 +21,7 @@ class GetCreditsMapperImplTest {
     }
 
     @Test
-    void mapCreditAndCustomerToGetCreditResponse() {
+    void whenCreditAndCustomerResponseIsCorrectMapToResponse() {
         //given
         GetCreditsResponse getCreditsResponse = new GetCreditsResponse(
                 "Marcin","Marcin","87103195338","Hipoteczny",1000d,100,20);
