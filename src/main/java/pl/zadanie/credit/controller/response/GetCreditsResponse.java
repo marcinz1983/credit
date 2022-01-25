@@ -1,5 +1,6 @@
 package pl.zadanie.credit.controller.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,5 +24,8 @@ public class GetCreditsResponse {
     private Double value;
 
     private Integer creditId;
+
+    @JsonIgnore
+    private Integer customerId;
 
 }
